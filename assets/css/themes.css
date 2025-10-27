@@ -1,0 +1,87 @@
+/* Theme definitions using semantic custom properties */
+
+:root {
+  /* Light theme colors */
+  --light-color-text: #3a3328;
+  --light-color-text-muted: #5a4d3e;
+  --light-color-background: #f0ede6;
+  --light-color-surface: #e8e3d8;
+  --light-color-border: #d4c9b8;
+  --light-color-accent: #5d3d8a;
+  --light-color-accent-hover: #4a2f6e;
+
+  /* Dark theme colors */
+  --dark-color-text: #e4e2dd;
+  --dark-color-text-muted: #a8a29e;
+  --dark-color-background: #201d24;
+  --dark-color-surface: #2d2a31;
+  --dark-color-border: #3d3a41;
+  --dark-color-accent: #9580c8;
+  --dark-color-accent-hover: #b39ddb;
+
+  /* Default to light theme */
+  --color-text: var(--light-color-text);
+  --color-text-muted: var(--light-color-text-muted);
+  --color-background: var(--light-color-background);
+  --color-surface: var(--light-color-surface);
+  --color-border: var(--light-color-border);
+  --color-accent: var(--light-color-accent);
+  --color-accent-hover: var(--light-color-accent-hover);
+
+  /* Social sites theme integration */
+  --social-link-color: var(--color-accent);
+  --social-link-hover-color: var(--color-accent-hover);
+  --social-bullet-color: var(--color-text-muted);
+}
+
+/* Explicit light theme */
+html[data-theme="light"] {
+  --color-text: var(--light-color-text);
+  --color-text-muted: var(--light-color-text-muted);
+  --color-background: var(--light-color-background);
+  --color-surface: var(--light-color-surface);
+  --color-border: var(--light-color-border);
+  --color-accent: var(--light-color-accent);
+  --color-accent-hover: var(--light-color-accent-hover);
+
+  --social-link-color: var(--color-accent);
+  --social-link-hover-color: var(--color-accent-hover);
+  --social-bullet-color: var(--color-text-muted);
+}
+
+/* Explicit dark theme */
+html[data-theme="dark"] {
+  --color-text: var(--dark-color-text);
+  --color-text-muted: var(--dark-color-text-muted);
+  --color-background: var(--dark-color-background);
+  --color-surface: var(--dark-color-surface);
+  --color-border: var(--dark-color-border);
+  --color-accent: var(--dark-color-accent);
+  --color-accent-hover: var(--dark-color-accent-hover);
+
+  --social-link-color: var(--color-accent);
+  --social-link-hover-color: var(--color-accent-hover);
+  --social-bullet-color: var(--color-text-muted);
+}
+
+/* Auto dark mode (system preference) */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --color-text: var(--dark-color-text);
+    --color-text-muted: var(--dark-color-text-muted);
+    --color-background: var(--dark-color-background);
+    --color-surface: var(--dark-color-surface);
+    --color-border: var(--dark-color-border);
+    --color-accent: var(--dark-color-accent);
+    --color-accent-hover: var(--dark-color-accent-hover);
+
+    --social-link-color: var(--color-accent);
+    --social-link-hover-color: var(--color-accent-hover);
+    --social-bullet-color: var(--color-text-muted);
+  }
+}
+
+/* Suppress outbound link arrows for social links */
+.social-link .external-link-icon {
+  display: none;
+}

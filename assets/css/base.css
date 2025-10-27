@@ -1,0 +1,276 @@
+/* CSS Custom Properties - fonts and non-color variables */
+:root {
+  --font-family-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  --font-family-mono:
+    "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, "Courier New", monospace;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  --border-radius: 0.375rem;
+  --max-width: 65ch;
+  --line-height: 1.6;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+html {
+  font-family: var(--font-family-sans);
+  line-height: var(--line-height);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: var(--spacing-md);
+  max-inline-size: var(--max-width);
+  margin-inline: auto;
+}
+
+/* Typography enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block: var(--spacing-xl) var(--spacing-md);
+  line-height: 1.2;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h1 {
+  color: var(--color-accent);
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+h4 {
+  font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+}
+h5 {
+  font-size: 1.125rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-block: var(--spacing-md);
+  text-wrap: pretty;
+}
+
+/* Links */
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: all 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-accent-hover);
+  text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Lists */
+ul,
+ol {
+  margin-block: var(--spacing-md);
+  padding-inline-start: var(--spacing-xl);
+}
+
+ol {
+  list-style-position: outside;
+}
+
+li {
+  margin-block: var(--spacing-xs);
+}
+
+/* Code */
+code {
+  font-family: var(--font-family-mono);
+  font-size: 0.875em;
+  background-color: var(--color-surface);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+}
+
+pre {
+  font-family: var(--font-family-mono);
+  font-size: 0.875rem;
+  background-color: var(--color-surface);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+  margin-block: var(--spacing-md);
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-text);
+}
+
+/* Blockquotes */
+blockquote {
+  margin-block: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-inline: 4px solid var(--color-accent);
+  background-color: var(--color-surface);
+  font-style: italic;
+  border-radius: var(--border-radius);
+}
+
+blockquote > :first-child {
+  margin-block-start: 0;
+}
+
+blockquote > :last-child {
+  margin-block-end: 0;
+}
+
+/* Tables */
+table {
+  inline-size: 100%;
+  border-collapse: collapse;
+  margin-block: var(--spacing-md);
+}
+
+th,
+td {
+  padding: var(--spacing-sm) var(--spacing-md);
+  text-align: start;
+  border-block-end: 1px solid var(--color-border);
+}
+
+th {
+  font-weight: 600;
+  background-color: var(--color-surface);
+}
+
+/* Images */
+img {
+  border-radius: var(--border-radius);
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-block-start: 1px solid var(--color-border);
+  margin-block: var(--spacing-2xl);
+}
+
+/* Form elements */
+input,
+textarea,
+select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  transition: border-color 0.2s ease;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  padding: var(--spacing-sm);
+  inline-size: 1.25rem;
+  block-size: 1.25rem;
+  margin: 0;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: grid;
+  place-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-background);
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  inline-size: 0.65rem;
+  block-size: 0.65rem;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1rem 1rem var(--color-background);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgb(139 69 19 / 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 1.875rem);
+  }
+  h2 {
+    font-size: clamp(1.25rem, 4vw, 1.5rem);
+  }
+  h3 {
+    font-size: clamp(1.125rem, 3.5vw, 1.25rem);
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}

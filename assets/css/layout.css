@@ -1,0 +1,90 @@
+/* Site layout structure */
+.site-header {
+  margin-block-end: var(--spacing-lg);
+  padding-block-end: var(--spacing-md);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.site-header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.site-title {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.site-nav {
+  margin-block-start: var(--spacing-sm);
+}
+
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.site-nav li {
+  margin: 0;
+}
+
+.site-nav li:not(:last-child) {
+  border-inline-end: 1px solid var(--color-border);
+}
+
+.site-nav a {
+  display: block;
+  text-decoration: none;
+  font-weight: 500;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius);
+  transition: background-color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  text-decoration: none;
+  background-color: var(--color-surface);
+}
+
+.site-footer {
+  margin-block-start: var(--spacing-2xl);
+  padding-block-start: var(--spacing-lg);
+  border-block-start: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* Content layout */
+main {
+  min-block-size: 60vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+
+  .site-header-top {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--spacing-sm);
+  }
+
+  .site-nav ul {
+    gap: 0;
+  }
+
+  .site-nav li:not(:last-child) {
+    border-inline-end: 1px solid var(--color-border);
+  }
+}

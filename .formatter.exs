@@ -1,0 +1,5 @@
+[
+  import_deps: [:temple],
+  inputs: ["{mix,.formatter,.credo}.exs", "{config,lib,test}/**/*.{ex,exs}"],
+  plugins: [Quokka]
+]

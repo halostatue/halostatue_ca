@@ -1,0 +1,18 @@
+/* TEAM */
+Author: Austin Ziegler
+Site: <%= @config.url || "https://halostatue.ca" %>
+GitHub: https://github.com/halostatue
+
+/* THANKS */
+AI Assistant: Kiro (powered by Claude, Anthropic)
+Role: Code generation, CSS, JavaScript, site infrastructure
+
+/* SITE */
+Last update: <%= Date.to_iso8601(Date.utc_today()) %>
+Language: English
+Standards: HTML5, CSS3
+Doctype: HTML5
+IDE: Kiro
+
+Components: Elixir, Tableau, Temple, MDEx
+Build tools: Bun, Pagefind
