@@ -1,0 +1,57 @@
+/* Social Sites Extension Styles */
+
+/* Block container for bulk rendering (dl element) */
+.social-block {
+  margin: var(--social-block-margin, 1rem 0);
+  line-height: var(--social-line-height, 1.6);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 var(--social-column-gap, 1rem);
+  align-items: baseline;
+}
+
+/* Platform labels (dt elements) */
+.social-block dt {
+  font-weight: var(--social-label-weight, 600);
+  grid-column: 1;
+  margin: 0;
+}
+
+/* Individual link items (dd elements) */
+.social-block dd {
+  grid-column: 2;
+  margin: 0;
+}
+
+/* Links within containers - default table mode (vertical stacking) */
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--social-link-gap, 0.25rem);
+}
+
+/* Flow mode - horizontal layout for multiple accounts */
+.social-block[data-socials-mode="flow"] .social-links {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--social-link-gap, 0.25rem) var(--social-link-spacing, 1rem);
+}
+
+/* Social link styling */
+.social-link {
+  text-decoration: none;
+  color: var(--social-link-color, #0066cc);
+  transition: color var(--social-transition, 0.2s ease);
+}
+
+.social-link:hover {
+  color: var(--social-link-hover-color, #004499);
+  text-decoration: underline;
+}
+
+/* Error messages */
+.social-error {
+  color: var(--social-error-color, #cc0000);
+  font-style: italic;
+  grid-column: 1 / -1;
+}

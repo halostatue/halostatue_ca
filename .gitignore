@@ -1,0 +1,15 @@
+*.ez
+/.fetch
+/_build/
+/_site/
+/cover/
+/deps/
+/doc/
+/node_modules/
+/tmp/
+/priv/plts/
+erl_crash.dump
+halostatue.ca.old/
+halostatue_ca-*.tar
+www-halostatue-ca/
+lighthouse-report.*

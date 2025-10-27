@@ -1,0 +1,15 @@
+[default]
+extend-ignore-re = [
+  # Creative Commons license abbreviation
+  "CC-BY-NC-ND|by-nc-nd",
+  # REST-ful pattern
+  "REST-ful",
+]
+
+[default.extend-words]
+# Biome linting rule name
+Inferrable = "Inferrable"
+
+# Person names
+Pease = "Pease"
+Wil = "Wil"

@@ -1,0 +1,15 @@
+/* halostatue.ca CSS - Main stylesheet with layer imports */
+
+/* Define layer order - later layers override earlier ones */
+@layer reset, base, layout, components, utilities, search, social, themes;
+
+/* Import external and internal stylesheets into their respective layers */
+@import url("coyier.css") layer(reset);
+@import url("reset.css") layer(reset);
+@import url("base.css") layer(base);
+@import url("layout.css") layer(layout);
+@import url("components.css") layer(components);
+@import url("utilities.css") layer(utilities);
+@import url("search.css") layer(search);
+@import url("social.css") layer(social);
+@import url("themes.css") layer(themes);

@@ -1,0 +1,133 @@
+# ai.txt for halostatue.ca
+# This file declares permissions for AI systems regarding content usage.
+# See: https://site.spawning.ai/spawning-ai-txt
+
+# User-Agent: *
+# The content on this site is NOT available for AI/ML training.
+# This includes but is not limited to:
+# - Large language model training
+# - Image generation model training
+# - Any form of machine learning dataset creation
+# - Embedding generation for AI systems
+
+User-Agent: *
+Disallow: /
+
+# Explicit blocks for known AI training systems
+
+# OpenAI - ChatGPT, GPT-4, DALL-E, etc.
+User-Agent: GPTBot
+Disallow: /
+
+User-Agent: ChatGPT-User
+Disallow: /
+
+User-Agent: OAI-SearchBot
+Disallow: /
+
+# Anthropic - Claude
+User-Agent: anthropic-ai
+Disallow: /
+
+User-Agent: ClaudeBot
+Disallow: /
+
+User-Agent: Claude-Web
+Disallow: /
+
+# Google - Gemini, Bard
+User-Agent: Google-Extended
+Disallow: /
+
+# Meta - LLaMA, etc.
+User-Agent: FacebookBot
+Disallow: /
+
+User-Agent: Meta-ExternalAgent
+Disallow: /
+
+# Apple Intelligence
+User-Agent: Applebot-Extended
+Disallow: /
+
+# Common Crawl - frequently used for training datasets
+User-Agent: CCBot
+Disallow: /
+
+# Perplexity AI
+User-Agent: PerplexityBot
+Disallow: /
+
+# Cohere
+User-Agent: cohere-ai
+Disallow: /
+
+# Amazon
+User-Agent: Amazonbot
+Disallow: /
+
+# ByteDance - TikTok AI
+User-Agent: Bytespider
+Disallow: /
+
+# ===================================================
+# EXPLICIT BLOCK: Elon Musk / X / xAI properties
+# These are specifically and emphatically not welcome.
+# ===================================================
+
+# X (formerly Twitter)
+User-Agent: Twitterbot
+Disallow: /
+
+# xAI / Grok
+User-Agent: Grok
+Disallow: /
+
+User-Agent: xAI
+Disallow: /
+
+User-Agent: xai-ai
+Disallow: /
+
+# Any future xAI crawler variants
+User-Agent: grok-ai
+Disallow: /
+
+User-Agent: GrokBot
+Disallow: /
+
+# ===================================================
+
+# Other AI/ML scrapers
+User-Agent: AI2Bot
+Disallow: /
+
+User-Agent: Ai2Bot-Dolma
+Disallow: /
+
+User-Agent: Diffbot
+Disallow: /
+
+User-Agent: ImagesiftBot
+Disallow: /
+
+User-Agent: Omgilibot
+Disallow: /
+
+User-Agent: YouBot
+Disallow: /
+
+User-Agent: PetalBot
+Disallow: /
+
+User-Agent: img2dataset
+Disallow: /
+
+User-Agent: Webzio-Extended
+Disallow: /
+
+User-Agent: sentibot
+Disallow: /
+
+User-Agent: iaskspider
+Disallow: /

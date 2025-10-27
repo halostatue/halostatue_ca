@@ -1,0 +1,5 @@
+/* Additional reset items not covered by Coyier's starter */
+#root,
+#__next {
+  isolation: isolate;
+}
