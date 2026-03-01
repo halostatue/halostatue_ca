@@ -17,9 +17,9 @@
 
   body {
     margin: 0;
-    padding: 2rem;
-    @media (width < 500px) {
-      padding: 1rem;
+    padding: 1rem 16px;
+    @media (min-width: 30em) {
+      padding: 2rem;
     }
   }
 
@@ -150,12 +150,6 @@
   samp {
     font-family: ui-monospace, SFMono-Regular, monospace;
   }
-  pre {
-    white-space: pre-wrap;
-    background: CanvasText;
-    color: Canvas;
-    padding: 1.5rem;
-  }
 
   svg {
     fill: currentColor;
@@ -165,6 +159,10 @@
   [disabled] {
     cursor: not-allowed;
   }
+  [hidden] {
+    /* biome-ignore lint/complexity/noImportantStyles: Defensive rule to ensure hidden attribute always works */
+    display: none !important;
+  }
   [disabled],
   label:has(input[disabled]) {
     opacity: 0.5;
@@ -172,6 +170,13 @@
     [disabled] {
       opacity: 1;
     }
+  }
+
+  pre {
+    white-space: pre-wrap;
+    background: CanvasText;
+    color: Canvas;
+    padding: 1.5rem;
   }
 
   hr {
@@ -207,10 +212,6 @@
     font-size: 90%;
   }
 
-  /* biome-ignore lint/complexity/noImportantStyles: Defensive rule to ensure hidden attribute always works */
-  [hidden] {
-    display: none !important;
-  }
   .screenreader-only:not(:focus):not(:active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);

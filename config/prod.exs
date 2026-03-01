@@ -8,4 +8,9 @@ config :tableau, TableauPaginationExtension,
     posts: [per_page: 15]
   ]
 
+config :tableau, TableauRedirectsExtension,
+  html: %{
+    enabled: false
+  }
+
 config :tableau, :config, url: "https://halostatue.ca"

@@ -1,14 +1,19 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.13/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.4.4/schema.json",
   "files": {
     "includes": [
-      "**",
+      "assets/**",
+      "build.js",
+      "biome.json",
+      "package.json",
+      "tsconfig.json",
       "!**/coverage",
       "!**/deps",
       "!**/dist",
       "!**/docs",
       "!**/lib",
       "!_site",
+      "!lighthouse*",
       "!halostatue.ca.old",
       "!www-halostatue-ca"
     ]

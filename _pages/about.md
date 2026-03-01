@@ -4,7 +4,7 @@ description: |
   the quality of being both too wordy and too brief.
 redirects:
   aliases:
-  - /halostatue
+    - /halostatue
 title: About
 ---
 
@@ -28,13 +28,13 @@ All of this makes the _TL;DR_ version of my bio above both perfectly accurate
 and bland.
 
 I have been on or led a software development team for more than thirty years,
-most of it working for Toronto[^immigrant]-area startups: Northern Labs (senior
-staff developer since late 2024), Kinetic Commerce (director of platform
-engineering 2014–2024), ClearFit (2013–2014), SurfEasy (2011–2013), EVault
-(2004–2011), and Solect Technologies (1998–2001). Before that, I worked at
-Vanguard Cellular (now owned by AT&T Wireless) in Greensboro, North Carolina and
-Policy Management Systems Corporation (now owned by Computer Sciences
-Corporation) in Columbia, South Carolina.
+most of it working for Toronto[^1]-area startups: Northern Labs (senior staff
+developer since late 2024), Kinetic Commerce (director of platform engineering
+2014–2024), ClearFit (2013–2014), SurfEasy (2011–2013), EVault (2004–2011), and
+Solect Technologies (1998–2001). Before that, I worked at Vanguard Cellular (now
+owned by AT&T Wireless) in Greensboro, North Carolina and Policy Management
+Systems Corporation (now owned by Computer Sciences Corporation) in Columbia,
+South Carolina.
 
 I have written free or open source software since 1990, adding rigour to my
 commitment with my adoption of Ruby in 2002, when I first published a number of
@@ -46,14 +46,11 @@ the development of 38 gems totalling nearly 3 billion downloads. While some of
 those gems have been retired, I continue to maintain several. I have also
 released and maintain several Elixir packages and Fish shell plugins.
 
-I am a polyglot developer. In my career, I have shipped[^shipped] software in
-more than forty[^forty] programming languages or dialects[^dialects] and can
-comprehend several other languages to the point where I can read them well
-enough to port the code to a language that I do know. (I have ported software
-from Smalltalk to Ruby, but I don't count Smalltalk in my known languages
-because I haven't shipped anything written in it). I use Elixir, Ruby,
-TypeScript, JavaScript, Python, Bash, and Fish on a weekly basis for work and
-personal projects alike.
+I am a [polyglot developer][polyglot]. In my career, I have shipped software in
+more than forty programming languages or dialects and can comprehend several
+other languages to the point where I can read them well enough to port the code
+to a language that I do know. I use Elixir, Ruby, TypeScript, JavaScript,
+Python, Bash, and Fish on a weekly basis for work and personal projects alike.
 
 I am a development leader. I have been heavily influenced by Michael Lopp
 ([Rands in Repose][rir]) in how I approach my duties as a manager. I succeed
@@ -99,12 +96,6 @@ review.
 Unless otherwise called out, I do not represent my employers (past or present)
 with what I write here. The opinions I express here are mine and mine alone.
 
-### …the comments
-
-Not here. Should I write something interesting enough to comment about, there
-are places to discuss it. Pick your favourite. If I see it, have an account, and
-care to comment -- I might do so.
-
 ### …old content
 
 In the ten years since the Hugo version of my site launched, I've done even
@@ -126,52 +117,14 @@ metadata pages (collection index pagination, tag pages, etc.).
 Where possible, when I have _updated_ articles, I have attempted to ensure that
 this is reflected.
 
-## …other services
+## …other places
 
 I can also be found elsewhere.
 
 <dl social-block></dl>
 
-[^immigrant]: I am an immigrant to Canada, having emigrated from the United
-    States of America in 1998.
-
-[^shipped]: That is, the software was made available for use by people other
-    than myself. I consider other people using build scripts that I have written
-    having shipped those scripts, in addition to the obvious cases of deploying
-    server software for access or sending installable packages to users.
-
-[^forty]: In my most recent count, I have shipped software in thirty-nine
-    primary programming languages (or dialects): [AWK][awk], [Bash][bash],
-    [C][c], [C#][csharp], [C++][cpp], [CoffeeScript][coffeescript],
-    [Delphi][delphi], [Elixir][elixir], [Fish shell][fish], [Go][golang],
-    [Io][iolang], [Java][java], [JavaScript][js], [jq][jq], [Korn shell][ksh],
-    [LaTeX][latex], [Lua][lua], [M4][m4], [Objective-C][objc], [PHP][php],
-    [PL/SQL][oracle-plsql], [PL/pgSQL][plpgsql], [Pascal][pascal], [Perl][perl],
-    [Pro\*C][oracle-proc], [Python][python], [REXX][rexx], [Ruby][ruby],
-    [Rust][rust], [Solidity][solidity], [Swift][swift], [Tcl][tcl],
-    [TypeScript][typescript], [Vim script][vimscript] (including Vim9 script),
-    [Visual Basic][vb], [Visual Basic for Applications][vba],
-    [Windows Batch files][windows-batch] (both `command.com` and `cmd.exe`), and
-    [zsh][zsh].
-
-    I've also shipped software using an additional seven quasi-programming
-    languages: [Ansible][ansible] (scripting with [YAML][yaml] and
-    [Jinja][jinja]), [Chezmoi][chezmoi] (scripting with Go templates),
-    [GitHub Actions][gha] (scripting with [YAML][yaml]), [HCL][hcl],
-    [Puppet][puppet] (a Ruby DSL), [SQL][sql], [XSL][xsl], and even
-    [WordPerfect][wordperfect] macros.
-
-    I consider myself conversant with [Erlang][erlang], [Gleam][gleam],
-    [Elm][elm], and [Zig][zig], and reading familiar with [Ada][ada],
-    [COBOL][cobol], and [Smalltalk][smalltalk].
-
-[^dialects]: In my mind, a dialect of a programming language is one that is
-    fairly similar to another programming language. As an example, I mention the
-    various Unix shells I have used. They're all related to the original Bourne
-    shell (except for `tcsh` and `fish`), but there are features in `ksh` that
-    do not exist in `bash` and vice-versa. `zsh` tends to have all the features,
-    but it is possible to write software in `zsh` that could not run in `bash`
-    without changes.
+[^1]: I am an immigrant to Canada, having emigrated from the United States of
+    America in 1998.
 
 [ada]: https://en.wikipedia.org/wiki/Ada_(programming_language)
 [ansible]: https://en.wikipedia.org/wiki/Ansible_(software)
@@ -212,6 +165,7 @@ I can also be found elsewhere.
 [perl]: https://en.wikipedia.org/wiki/Perl
 [php]: https://en.wikipedia.org/wiki/PHP
 [plpgsql]: https://en.wikipedia.org/wiki/PL/pgSQL
+[polyglot]: $ref:polyglot.md
 [puppet]: https://en.wikipedia.org/wiki/Puppet_(software)
 [python]: https://en.wikipedia.org/wiki/Python_(programming_language)
 [rexx]: https://en.wikipedia.org/wiki/Rexx

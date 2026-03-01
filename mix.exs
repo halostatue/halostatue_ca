@@ -78,8 +78,9 @@ defmodule HalostatueCa.MixProject do
 
   defp aliases do
     [
-      build: ["cmd rm -rf _site", "bun default", "tableau.build"],
-      check: ["format --check-formatted", "credo --strict", "dialyzer", "cmd mix lighthouse"]
+      build: ["cmd rm -rf _site", "bun default", "tableau.build", "caddy.redirects"],
+      check: ["format --check-formatted", "bun biome check", "credo --strict", "dialyzer", "cmd mix lighthouse"],
+      format: ["format", "bun biome check --write"]
     ]
   end
 

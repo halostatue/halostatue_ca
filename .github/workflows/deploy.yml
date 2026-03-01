@@ -83,7 +83,7 @@ jobs:
       - name: Install dchook-notify
         if: steps.check-notify.outputs.enabled == 'true'
         run: |
-          gh release download v1.0.0 \
+          gh release download v1.2.0 \
             --repo halostatue/dchook \
             --pattern 'dchook-notify_Linux_x86_64.tar.gz'
           gh attestation verify dchook-notify_Linux_x86_64.tar.gz \

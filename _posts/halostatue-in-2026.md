@@ -1,6 +1,6 @@
 ---
 title: "halostatue.ca in 2026"
-date: 2026-02-24
+date: 2026-02-28
 tags:
   - Blogging
   - Elixir
@@ -11,12 +11,14 @@ moving from [Hugo][hugo] to [Tableau][tableau] and from AWS to Hetzner.
 
 <!--more-->
 
-## Build on what you love or what's easy
-
 There are many ~~excuses~~reasons. I was too busy with work and the rest of my
-life. The start of the ongoing COVID-19 pandemic in 2020 wasn't inspirational
-for writing, at least for me. I didn't love anything about what I had put
-together, and the time it had taken to switch and customize it wore me out.
+life
+
+. The start of the ongoing COVID-19 pandemic in 2020 wasn't inspirational for
+writing, at least for me. I didn't love anything about what I had put together,
+and the time it had taken to switch and customize it wore me out.
+
+## Build on what you love or what's easy
 
 Ultimately, I didn't love working with [Hugo][hugo][^1]. I had a fantastic
 static site deployment mechanism dependent on Terraform[^2] that nonetheless

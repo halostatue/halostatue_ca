@@ -8,6 +8,7 @@
 /node_modules/
 /tmp/
 /priv/plts/
+/redirects.caddy
 erl_crash.dump
 halostatue.ca.old/
 halostatue_ca-*.tar

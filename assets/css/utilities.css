@@ -19,6 +19,13 @@
   color: var(--color-text-muted);
 }
 
+.language-proficiency-lists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  font-size: 0.9em;
+}
+
 /* Skip to content link for accessibility */
 .skip-to-content {
   position: absolute;

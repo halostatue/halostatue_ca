@@ -4,7 +4,7 @@ alias Floki.HTMLParser.FastHtml
 alias Floki.HTMLParser.Html5ever
 
 config :bun,
-  version: "1.3.8",
+  version: "1.3.10",
   install: [
     args: ~w(install)
   ],
@@ -14,6 +14,10 @@ config :bun,
   ],
   lighthouse: [
     args: ~w(lighthouse),
+    cd: Path.expand("..", __DIR__)
+  ],
+  biome: [
+    args: ~w(x biome),
     cd: Path.expand("..", __DIR__)
   ]
 
@@ -112,7 +116,7 @@ config :tableau, TableauRedirectsExtension,
   }
 
 config :tableau, TableauRefLinkExtension,
-  enabled: false,
+  enabled: true,
   prefix: "$ref",
   base_prefix: "$base"
 
@@ -123,16 +127,16 @@ config :tableau, TableauSocialExtension,
   accounts: [
     github: "halostatue",
     mastodon: [
-      "austin@ruby.social",
+      # "austin@ruby.social",
       "halostatue@cosocial.ca"
-    ],
-    linkedin: "austinziegler",
-    bluesky: "halostatue.ca",
-    hacker_news: "halostatue",
-    keybase: "halostatue",
-    newsblur: "halostatue",
-    stack_overflow: "36378/austin-ziegler",
-    tumblr: "halostatue"
+    ]
+    # linkedin: "austinziegler",
+    # bluesky: "halostatue.ca",
+    # hacker_news: "halostatue",
+    # keybase: "halostatue",
+    # newsblur: "halostatue",
+    # stack_overflow: "36378/austin-ziegler",
+    # tumblr: "halostatue"
   ]
 
 config :tableau, :assets, bun: {Bun, :install_and_run, [:default, ~w(--watch)]}
