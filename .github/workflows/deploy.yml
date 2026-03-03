@@ -4,6 +4,17 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '_eex/**'
+      - '_pages/**'
+      - '_posts/**'
+      - 'config/**'
+      - 'extra/**'
+      - 'lib/**'
+      - 'build.js'
+      - 'package.json'
+      - 'Dockerfile'
+      - '.github/workflows/deploy.yml'
 
   workflow_dispatch:
 
@@ -18,6 +29,8 @@ env:
   IMAGE_NAME: ${{ github.repository }}
   DCHOOK_VERSION: v1.2.0
   DCHOOK_BASE: 'dchook_Linux_x86_64'
+  DCHOOK_URL: https://dch.halostatue.ca
+  DOCKER_HUB_USERNAME: halostatue
 
 jobs:
   build-and-deploy:
@@ -28,6 +41,18 @@ jobs:
       packages: write # Required to push container images to GHCR
 
     steps:
+      - name: Harden Runner
+        uses: step-security/harden-runner@5ef0c079ce82195b2a36a210272d6b661572d83e # v2.14.2
+        with:
+          egress-policy: audit
+          # disable-sudo: true
+          # egress-policy: block
+          # allowed-endpoints: >
+          #   api.github.com:443
+          #   ghcr.io:443
+          #   github.com:443
+          #   pkg-containers.githubusercontent.com:443
+
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
@@ -39,7 +64,7 @@ jobs:
       - name: Log in to Docker Hub
         uses: docker/login-action@c94ce9fb468520275223c153574b00df6fe4bcc9 # v3.7.0
         with:
-          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          username: ${{ env.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
       - name: Log in to GHCR
@@ -73,13 +98,12 @@ jobs:
       - name: Check deployment notify
         id: check-notify
         run: |
-          if [[ -n "$DCHOOK_URL" ]] && [[ -n "$DCHOOK_SECRET" ]]; then
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          if [[ -n "${DCHOOK_URL}" ]] && [[ -n "${DCHOOK_SECRET}" ]]; then
+            echo "enabled=true" >> "${GITHUB_OUTPUT}"
           else
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "enabled=false" >> "${GITHUB_OUTPUT}"
           fi
         env:
-          DCHOOK_URL: ${{ secrets.DCHOOK_URL }}
           DCHOOK_SECRET: ${{ secrets.DCHOOK_SECRET }}
 
       - name: Install dchook-notify
@@ -100,7 +124,6 @@ jobs:
       - name: Trigger deployment
         if: steps.check-notify.outputs.enabled == 'true'
         env:
-          DCHOOK_URL: ${{ secrets.DCHOOK_URL }}
           DCHOOK_SECRET: ${{ secrets.DCHOOK_SECRET }}
           METADATA_JSON: ${{ steps.meta.outputs.json }}
         run: |
