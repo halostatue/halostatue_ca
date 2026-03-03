@@ -16,6 +16,8 @@ permissions: {}
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
+  DCHOOK_VERSION: v1.2.0
+  DCHOOK_BASE: 'dchook_Linux_x86_64'
 
 jobs:
   build-and-deploy:
@@ -83,15 +85,15 @@ jobs:
       - name: Install dchook-notify
         if: steps.check-notify.outputs.enabled == 'true'
         run: |
-          gh release download v1.2.0 \
+          gh release download "${DCHOOK_VERSION}" \
             --repo halostatue/dchook \
-            --pattern 'dchook-notify_Linux_x86_64.tar.gz'
-          gh attestation verify dchook-notify_Linux_x86_64.tar.gz \
+            --pattern "${DCHOOK_BASE}.tar.gz"
+          gh attestation verify "${DCHOOK_BASE}.tar.gz" \
             --repo halostatue/dchook
-          tar -xzf dchook-notify_Linux_x86_64.tar.gz \
+          tar -xzf "${DCHOOK_BASE}.tar.gz" \
             --strip-components=1 \
             -C /usr/local/bin \
-            dchook-notify_Linux_x86_64/dchook-notify
+            "${DCHOOK_BASE}/dchook-notify"
         env:
           GH_TOKEN: ${{ github.token }}
 
