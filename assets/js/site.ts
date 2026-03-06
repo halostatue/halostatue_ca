@@ -28,6 +28,7 @@ function enableProgressiveEnhancement() {
   initializeExternalLinks()
   initializeSearchShortcut()
   initializeInlineSearch()
+  loadPagefind()
 }
 
 function initializeThemeSwitcher() {
@@ -117,6 +118,28 @@ function initializeExternalLinks() {
 declare const PagefindUI: any
 
 let pagefindUI: typeof PagefindUI = null
+let pagefindLoading: Promise<void> | null = null
+
+function loadPagefind(): Promise<void> {
+  if (pagefindLoading) {
+    return pagefindLoading
+  }
+
+  pagefindLoading = new Promise((resolve, reject) => {
+    const style = document.createElement('style')
+    style.textContent =
+      '@import url("/pagefind/pagefind-ui.css") layer(search.pagefind-ui);'
+    document.head.appendChild(style)
+
+    const script = document.createElement('script')
+    script.src = '/pagefind/pagefind-ui.js'
+    script.onload = () => resolve()
+    script.onerror = reject
+    document.head.appendChild(script)
+  })
+
+  return pagefindLoading
+}
 
 function initializeSearchShortcut() {
   const modal = document.getElementById('search-modal')
@@ -126,8 +149,9 @@ function initializeSearchShortcut() {
     return
   }
 
-  function ensurePagefindUI() {
+  async function ensurePagefindUI() {
     if (!pagefindUI) {
+      await loadPagefind()
       pagefindUI = new PagefindUI({
         element: '#modal-search',
         showSubResults: true,
