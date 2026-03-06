@@ -10,7 +10,7 @@ defmodule HalostatueCa.TagsPage do
     title: "Tags"
 
   def template(assigns) do
-    sorted_tags = Enum.sort_by(assigns.tags, fn {_, posts} -> length(posts) end, :desc)
+    sorted_tags = Enum.sort_by(assigns.tags, fn {tag, _posts} -> String.downcase(tag.tag) end)
 
     temple do
       section do

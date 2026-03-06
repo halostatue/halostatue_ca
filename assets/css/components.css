@@ -49,6 +49,19 @@
   text-decoration: underline;
 }
 
+/* Tag list */
+.tag-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.tag-list-item {
+  align-items: baseline;
+}
+
 .post-list-excerpt {
   margin-block: var(--spacing-sm);
   color: var(--color-text-muted);
