@@ -163,6 +163,12 @@ defmodule HalostatueCa.RootLayout do
                 end
 
                 li do
+                  a href: "/projects" do
+                    "Projects"
+                  end
+                end
+
+                li do
                   a href: "/posts" do
                     "Posts"
                   end

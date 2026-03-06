@@ -16,6 +16,10 @@ defmodule HalostatueCa.ProjectLayout do
               assigns.page.title
             end
 
+            if assigns.page[:project_links] do
+              project_links_meta(assigns.page.project_links)
+            end
+
             if assigns.page[:description] do
               p class: "page-description text-muted" do
                 assigns.page.description
@@ -51,4 +55,18 @@ defmodule HalostatueCa.ProjectLayout do
     end)
     |> Enum.sort_by(& &1.date, {:desc, Date})
   end
+
+  defp project_links_meta(links) when is_list(links) do
+    temple do
+      div class: "project-links", data_pagefind_ignore: true do
+        for {link_map, _index} <- Enum.with_index(links), {label, url} <- link_map do
+          a href: url, class: "project-link-capsule" do
+            to_string(label)
+          end
+        end
+      end
+    end
+  end
+
+  defp project_links_meta(_), do: nil
 end
