@@ -31,7 +31,7 @@ defmodule HalostatueCa.HomePage do
             "Recent Posts"
           end
 
-          post_list(recent_posts, show_tags: false)
+          post_list(recent_posts, show_tags: true)
 
           p do
             a href: "/posts" do

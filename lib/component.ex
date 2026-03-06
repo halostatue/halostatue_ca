@@ -155,8 +155,8 @@ defmodule HalostatueCa.Component do
           end
         end
 
-        if page[:reading_time] do
-          " • #{page.reading_time} min read"
+        if page[:prosody] && page.prosody[:reading_time] do
+          " • #{page.prosody.reading_time} min read"
         end
 
         if page[:tags] && not Enum.empty?(page.tags) do
@@ -173,10 +173,12 @@ defmodule HalostatueCa.Component do
   Options:
   - :show_tags - include tag links in meta (default: true)
   - :show_excerpt - include excerpt if present (default: true)
+  - :show_reading_time - include reading time (default: true)
   """
   def post_list_item(post, opts \\ []) do
     show_tags = Keyword.get(opts, :show_tags, true)
     show_excerpt = Keyword.get(opts, :show_excerpt, true)
+    show_reading_time = Keyword.get(opts, :show_reading_time, true)
 
     temple do
       li class: "post-list-item" do
@@ -186,7 +188,7 @@ defmodule HalostatueCa.Component do
           end
         end
 
-        post_meta(post, show_tags: show_tags)
+        post_meta(post, show_tags: show_tags, show_reading_time: show_reading_time)
 
         if show_excerpt && post[:excerpt] do
           div class: "post-list-excerpt" do

@@ -146,7 +146,6 @@ config :tableau, :config,
   markdown: [
     mdex: [
       extension: [
-        greentext: true,
         header_ids: "",
         highlight: true,
         math_code: true,
