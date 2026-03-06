@@ -1,6 +1,14 @@
 ---
 title: "halostatue.ca in 2026"
 date: 2026-02-28
+permalink: /posts/2026/02/halostatue-ca-in-2026
+redirects:
+  aliases:
+    - /posts/2026/02/halostatue.ca-in-2026
+revisions:
+  - date: 2026-03-04
+    rev: |
+      Fixed some errors that I should have caught before publishing.
 tags:
   - Blogging
   - Elixir
@@ -12,15 +20,16 @@ moving from [Hugo][hugo] to [Tableau][tableau] and from AWS to Hetzner.
 <!--more-->
 
 There are many ~~excuses~~reasons. I was too busy with work and the rest of my
-life
-
-. The start of the ongoing COVID-19 pandemic in 2020 wasn't inspirational for
-writing, at least for me. I didn't love anything about what I had put together,
-and the time it had taken to switch and customize it wore me out.
+life. I started a new job in 2014 and that took up a lot of my time. I preferred
+letting my code speak as I contributed to the projects I maintain (or not; a lot
+of those went by the wayside as well) Eventually, the start of the ongoing
+COVID-19 pandemic in 2020 wasn't inspirational for writing, at least for me. I
+didn't love anything about what I had put together for blogging, and the time it
+had taken to switch and customize it wore me out.
 
 ## Build on what you love or what's easy
 
-Ultimately, I didn't love working with [Hugo][hugo][^1]. I had a fantastic
+Fundamentally, I didn't love working with [Hugo][hugo][^1]. I had a fantastic
 static site deployment mechanism dependent on Terraform[^2] that nonetheless
 felt like too much work to update because I had no automation.
 
