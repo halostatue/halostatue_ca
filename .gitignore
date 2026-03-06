@@ -10,7 +10,6 @@
 /priv/plts/
 /redirects.caddy
 erl_crash.dump
-halostatue.ca.old/
 halostatue_ca-*.tar
-www-halostatue-ca/
 lighthouse-report.*
+/history-mines

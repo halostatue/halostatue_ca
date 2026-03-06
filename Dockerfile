@@ -12,14 +12,19 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Elixir dependencies
-COPY . .
-RUN <<SETUP
-mix local.hex --force
-mix local.rebar --force
-mix do deps.get + deps.compile + bun.install + bun install
-SETUP
+# Install hex and rebar
+RUN mix local.hex --force && mix local.rebar --force
 
+# Install Elixir dependencies
+COPY mix.exs mix.lock ./
+RUN mix do deps.get + deps.compile
+
+# Install Bun dependencies
+COPY package.json bun.lockb ./
+RUN mix do bun.install + bun install
+
+# Copy application code and build
+COPY . .
 RUN MIX_ENV=prod mix build
 
 FROM dhi.io/caddy:2
