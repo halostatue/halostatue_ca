@@ -1,2 +1,19 @@
 # Exclude redirects.json from Docker image (only need redirects.caddy)
 _site/redirects.json
+_build/
+_drafts/
+_eex
+_pages
+_posts
+_site/
+_wip/
+deps/
+Dockerfile/
+/*.svg
+history-mines/
+node_modules/
+priv/plts/
+redirects.caddy
+/*.md
+test/
+til.txt

@@ -3,6 +3,7 @@
 FROM hexpm/elixir:1.19.5-erlang-28.3.2-debian-trixie-20260202-slim AS builder
 
 WORKDIR /app
+ENV MIX_ENV=prod
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     git \
@@ -17,15 +18,17 @@ RUN mix local.hex --force && mix local.rebar --force
 
 # Install Elixir dependencies
 COPY mix.exs mix.lock ./
+COPY config config
 RUN mix do deps.get + deps.compile
 
 # Install Bun dependencies
 COPY package.json bun.lockb ./
-RUN mix do bun.install + bun install
+RUN mix do bun.install + bun install --frozen-lockfile --no-progress --production
 
 # Copy application code and build
 COPY . .
-RUN MIX_ENV=prod mix build
+
+RUN mix build
 
 FROM dhi.io/caddy:2
 
