@@ -2,9 +2,6 @@
 _site/redirects.json
 _build/
 _drafts/
-_eex
-_pages
-_posts
 _site/
 _wip/
 deps/
