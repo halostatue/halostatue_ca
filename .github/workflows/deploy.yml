@@ -27,7 +27,7 @@ permissions: {}
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  DCHOOK_VERSION: v1.2.1
+  DCHOOK_VERSION: v1.2.3
   DCHOOK_BASE: 'dchook_Linux_x86_64'
   DCHOOK_URL: https://dch.halostatue.ca
   DOCKER_HUB_USERNAME: halostatue

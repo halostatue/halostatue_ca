@@ -37,7 +37,7 @@ defmodule HalostatueCa.MixProject do
 
   defp deps do
     [
-      {:bun, "~> 1.5", runtime: Mix.env() == :dev},
+      {:bun, "~> 2.0", runtime: Mix.env() == :dev},
       {:floki, "~> 0.36"},
       {:html5ever, "~> 0.15"},
       {:mdex, "~> 0.11"},
