@@ -1,6 +1,6 @@
 /* TEAM */
 Author: Austin Ziegler
-Site: <%= @config.url || "https://halostatue.ca" %>
+Site: <%= @config.url %>
 GitHub: https://github.com/halostatue
 
 /* THANKS */
@@ -9,10 +9,11 @@ Role: Code generation, CSS, JavaScript, site infrastructure
 
 /* SITE */
 Last update: <%= Date.to_iso8601(Date.utc_today()) %>
+Git commit: <%= @token.data["commit"] %>
 Language: English
 Standards: HTML5, CSS3
 Doctype: HTML5
 IDE: Kiro
 
 Components: Elixir, Tableau, Temple, MDEx
-Build tools: Bun, Pagefind
+Build tools: Bun, PagefindChecked 15 files in 22ms. No fixes applied.Checked 15 files in 20ms. No fixes applied.

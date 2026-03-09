@@ -189,6 +189,14 @@
   display: block;
 }
 
+/* Filter blocks (details/summary) */
+.pagefind-ui__filter-block {
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.375rem;
+  overflow: hidden;
+}
+
 /* Mobile: make label a toggle for filter blocks */
 @media (max-width: 767px) {
   .pagefind-ui__filter-panel-label {
@@ -226,14 +234,6 @@
     > .pagefind-ui__filter-panel-label {
     margin-bottom: 0.75rem;
   }
-}
-
-/* Filter blocks (details/summary) */
-.pagefind-ui__filter-block {
-  margin-bottom: 0.75rem;
-  border: 1px solid var(--color-border);
-  border-radius: 0.375rem;
-  overflow: hidden;
 }
 
 .pagefind-ui__filter-name {

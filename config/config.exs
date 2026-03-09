@@ -17,7 +17,7 @@ config :bun,
     cd: Path.expand("..", __DIR__)
   ],
   biome: [
-    args: ~w(x biome),
+    args: ~w(x --silent biome),
     cd: Path.expand("..", __DIR__)
   ]
 

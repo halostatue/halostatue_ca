@@ -1,0 +1,45 @@
+# Robots.txt for halostatue.ca
+
+# Standard search engines - welcome
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Musk-owned garbage - explicit blocks
+# X/Twitter
+User-agent: Twitterbot
+Disallow: /
+
+# xAI/Grok
+User-agent: Grok
+Disallow: /
+
+User-agent: xAI
+Disallow: /
+
+User-agent: xai-ai
+Disallow: /
+
+User-agent: grok-ai
+Disallow: /
+
+User-agent: GrokBot
+Disallow: /
+
+# AI Training Crawlers - community maintained list
+<%= @token.data["ai_robots"] %>
+
+# Default - allow legitimate crawlers
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: <%= @config.url || "https://halostatue.ca" %>/sitemap.xml

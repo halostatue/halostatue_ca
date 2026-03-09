@@ -2,30 +2,53 @@
 // Handles JavaScript bundling and CSS with Lightning CSS
 
 const isProduction = process.env.MIX_ENV === 'prod'
+const watchMode = process.argv.includes('--watch')
 
-// JavaScript build
-const jsResult = await Bun.build({
-  entrypoints: ['./assets/js/site.ts'],
-  outdir: './_site/js',
-  minify: isProduction,
-  sourcemap: isProduction ? 'none' : 'inline',
-  target: 'browser',
-})
+async function buildAssets() {
+  // JavaScript build
+  const jsResult = await Bun.build({
+    entrypoints: ['./assets/js/site.ts'],
+    outdir: './_site/js',
+    minify: isProduction,
+    sourcemap: isProduction ? 'none' : 'inline',
+    target: 'browser',
+  })
 
-if (!jsResult.success) {
-  console.error('JS build failed:', jsResult.logs)
-  process.exit(1)
+  if (!jsResult.success) {
+    console.error('JS build failed:', jsResult.logs)
+    if (!watchMode) {
+      process.exit(1)
+    }
+    return
+  }
+
+  // CSS build with Lightning CSS
+  const { bundle } = await import('lightningcss')
+
+  const { code } = bundle({
+    filename: './assets/css/site.css',
+    minify: isProduction,
+    sourceMap: !isProduction,
+  })
+
+  await Bun.write('./_site/css/site.css', code)
+
+  console.log(`Built assets (${isProduction ? 'production' : 'development'})`)
 }
 
-// CSS build with Lightning CSS
-const { bundle } = await import('lightningcss')
+if (watchMode) {
+  console.log('Watching for changes...')
 
-const { code } = bundle({
-  filename: './assets/css/site.css',
-  minify: isProduction,
-  sourceMap: !isProduction,
-})
+  const fs = await import('node:fs')
 
-await Bun.write('./_site/css/site.css', code)
+  fs.watch('./assets', { recursive: true }, async (_eventType, filename) => {
+    if (filename) {
+      await buildAssets()
+    }
+  })
 
-console.log(`Built assets (${isProduction ? 'production' : 'development'})`)
+  // Keep process alive
+  await new Promise(() => {})
+} else {
+  await buildAssets()
+}
