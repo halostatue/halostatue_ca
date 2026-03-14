@@ -80,7 +80,7 @@ defmodule HalostatueCa.MixProject do
     [
       build: ["cmd rm -rf _site", "bun default", "tableau.build", "caddy.redirects"],
       check: ["format --check-formatted", "bun biome check", "credo --strict", "dialyzer", "cmd mix lighthouse"],
-      format: ["format", "bun biome check --write"]
+      format: ["format", "bun biome check --write --reporter-file=/dev/null"]
     ]
   end
 

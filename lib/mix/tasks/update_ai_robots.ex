@@ -53,7 +53,13 @@ defmodule Mix.Tasks.UpdateAiRobots do
   end
 
   defp read_cached_update do
-    if File.exists?(@cache_file), do: @cache_file |> File.read!() |> String.trim(), else: ""
+    if File.exists?(@cache_file) do
+      @cache_file
+      |> File.read!()
+      |> String.trim()
+    else
+      ""
+    end
   end
 
   defp fetch!(uri), do: Req.get!(uri).body

@@ -26,6 +26,7 @@ function enableProgressiveEnhancement() {
 
   initializeThemeSwitcher()
   initializeExternalLinks()
+  initializeCopyCode()
   initializeSearchShortcut()
   initializeInlineSearch()
   loadPagefind()
@@ -109,8 +110,42 @@ function initializeExternalLinks() {
     link.setAttribute('rel', 'noopener noreferrer')
 
     if (!link.querySelector('.external-link-icon')) {
-      link.innerHTML += ' <span class="external-link-icon" aria-hidden="true">↗</span>'
+      link.innerHTML +=
+        ' <span class="external-link-icon" aria-hidden="true"></span><span class="visually-hidden">(external link)</span>'
     }
+  }
+}
+
+function initializeCopyCode() {
+  for (const code of document.querySelectorAll<HTMLElement>(
+    'pre > code[class*="language-"]',
+  )) {
+    const pre = code.parentElement as HTMLPreElement
+    pre.classList.add('has-copy-button')
+
+    const button = document.createElement('button')
+    button.className = 'copy-code-button'
+    button.title = 'Copy'
+    button.type = 'button'
+
+    const label = document.createElement('span')
+    label.textContent = 'Copy'
+    button.appendChild(label)
+
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(code.textContent || '').then(() => {
+        button.setAttribute('data-copied', 'true')
+        button.title = 'Copied'
+        label.textContent = 'Copied'
+        setTimeout(() => {
+          button.removeAttribute('data-copied')
+          button.title = 'Copy'
+          label.textContent = 'Copy'
+        }, 2000)
+      })
+    })
+
+    pre.appendChild(button)
   }
 }
 

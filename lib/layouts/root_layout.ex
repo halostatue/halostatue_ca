@@ -237,6 +237,10 @@ defmodule HalostatueCa.RootLayout do
               end
 
               "."
+
+              a href: "$ref:licence.md" do
+                "Licence"
+              end
             end
           end
 
