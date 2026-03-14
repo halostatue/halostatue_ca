@@ -19,7 +19,7 @@ It processes all `.eex` files recursively in the configured directory.
 ## Usage
 
 Create EEx template files in the configured directory (default: `_eex/`), such
-as `_eex/hunans.txt.eex`.
+as `_eex/humans.txt.eex`.
 
 <div class="code-transform">
 
