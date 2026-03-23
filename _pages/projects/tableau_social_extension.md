@@ -3,6 +3,8 @@ title: TableauSocialExtension
 layout: HalostatueCa.ProjectLayout
 related_tag: tableau_social_extension
 categories: [Elixir, Tableau extension]
+description: |
+  Makes it easy to have your social media profile links visible.
 project_links:
   - Source Code: https://github.com/halostatue/tableau_social_extension
   - Hex Package: https://hex.pm/packages/tableau_social_extension

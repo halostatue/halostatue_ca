@@ -3,6 +3,9 @@ title: TableauEexExtension
 layout: HalostatueCa.ProjectLayout
 related_tag: tableau_eex_extension
 categories: [Elixir, Tableau extension]
+description: |
+  Adds support for pages that are EEX templates. This is used to generate
+  [`humans.txt`](/humans.txt).
 project_links:
   - Source Code: https://github.com/halostatue/tableau_eex_extension
   - Hex Package: https://hex.pm/packages/tableau_eex_extension

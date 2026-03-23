@@ -3,6 +3,8 @@ title: Prosody
 layout: HalostatueCa.ProjectLayout
 related_tag: prosody
 categories: [Elixir, Tableau extension, Text analysis]
+description: |
+  Calculates reading time and other content metrics.
 project_links:
   - Source Code: https://github.com/halostatue/prosody
   - Hex Package: https://hex.pm/packages/prosody

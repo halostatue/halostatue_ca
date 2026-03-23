@@ -51,6 +51,7 @@ defmodule HalostatueCa.MixProject do
       # {:pagefindex, "~> 1.0", path: Path.expand("~/oss/halostatue/pagefindex")},
       {:prosody, "~> 1.0"},
       # {:prosody, "~> 1.0", path: Path.expand("~/oss/halostatue/prosody")},
+      {:req, "~> 0.5"},
       {:solid, "~> 1.1"},
       {:tableau, "~> 0.30"},
       # {:tableau, "~> 0.30", path: Path.expand("~/oss/forks/tableau"), override: true},
@@ -69,7 +70,6 @@ defmodule HalostatueCa.MixProject do
       {:temple, "~> 0.12"},
       {:tz, "~> 0.28"},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
-      {:mint, "~> 1.7", only: [:dev, :test]},
       {:stream_data, "~> 1.1", only: [:dev, :test]},
       {:quokka, "~> 2.0", only: [:dev, :test]},
       {:usage_rules, "~> 1.1", only: [:dev], runtime: false}

@@ -3,6 +3,8 @@ title: TableauRedirectsExtension
 layout: HalostatueCa.ProjectLayout
 related_tag: tableau_redirects_extension
 categories: [Elixir, Tableau extension]
+description: |
+  Generates redirects for moved content (because cool URIs don't change).
 project_links:
   - Source Code: https://github.com/halostatue/tableau_redirects_extension
   - Hex Package: https://hex.pm/packages/tableau_redirects_extension

@@ -80,11 +80,11 @@ extensions and MDEx plugins:
   in Markdown with as much privacy-preservation as possible.
 - [`pagefindex`][pagefindex]: Integrated [Pagefind][pagefind] with Tableau for
   site search.
-- [`prosody`][prosody]: Calculates reading time and other content metrics
+- [`prosody`][prosody]: Calculates reading time and other content metrics.
 - [`tableau_eex_extension`][eex]: Adds support for pages that are EEX templates.
   This is used to generate [`humans.txt`](/humans.txt).
 - [`tableau_excerpt_extension`][excerpt]: Excerpts content from posts.
-- [`tableau_pagination_extension`][pagination]: provides paginated collections
+- [`tableau_pagination_extension`][pagination]: Provides paginated collections
   for indexes, tags, tag pages, and more.
 - [`tableau_redirects_extension`][redirects]: Generates redirects for moved
   content (because cool URIs don't change).
@@ -146,21 +146,21 @@ been around too long.
     to have developed them from scratch.
 
 [coyier-starter]: https://frontendmasters.com/blog/the-coyier-css-starter/
-[custom_heading_id]: https://hex.pm/packages/mdex_custom_heading_id
-[dchook]: https://github.com/halostatue/dchook
-[eex]: https://hex.pm/packages/tableau_eex_extension
-[excerpt]: https://hex.pm/packages/tableau_excerpt_extension
+[custom_heading_id]: $ref:mdex_custom_heading_id.md
+[dchook]: $ref:dchook.md
+[eex]: $ref:tableau_eex_extension.md
+[excerpt]: $ref:tableau_excerpt_extension.md
 [go-template]: https://pkg.go.dev/text/template
 [hugo]: https://gohugo.io
 [kiro]: https://kiro.dev
 [pagefind]: https://pagefind.app/
-[pagefindex]: https://hex.pm/packages/pagefindex
-[pagination]: https://hex.pm/packages/tableau_pagination_extension
-[prosody]: https://hex.pm/packages/prosody
-[redirects]: https://hex.pm/packages/tableau_redirects_extension
-[ref_link]: https://hex.pm/packages/tableau_ref_link_extension
-[social]: https://hex.pm/packages/tableau_social_extension
+[pagefindex]: $ref:pagefindex.md
+[pagination]: $ref:tableau_pagination_extension.md
+[prosody]: $ref:prosody.md
+[redirects]: $ref:tableau_redirects_extension.md
+[ref_link]: $ref:tableau_ref_link_extension.md
+[social]: $ref:tableau_social_extension.md
 [tableau]: https://hexdocs.pm/tableau
 [temple]: https://hexdocs.pm/temple
-[video_embed]: https://hex.pm/packages/mdex_video_embed
+[video_embed]: $ref:mdex_video_embed.md
 [worst]: https://colton.dev/blog/tailwind-is-the-worst-of-all-worlds/

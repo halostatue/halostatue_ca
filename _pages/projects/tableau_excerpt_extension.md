@@ -3,6 +3,8 @@ title: TableauExcerptExtension
 layout: HalostatueCa.ProjectLayout
 related_tag: tableau_excerpt_extension
 categories: [Elixir, Tableau extension]
+description: |
+  Excerpts content from posts.
 project_links:
   - Source Code: https://github.com/halostatue/tableau_excerpt_extension
   - Hex Package: https://hex.pm/packages/tableau_excerpt_extension

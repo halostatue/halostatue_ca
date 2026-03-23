@@ -3,6 +3,8 @@ title: MDExCustomHeadingId
 layout: HalostatueCa.ProjectLayout
 related_tag: MDExCustomHeadingId
 categories: [Elixir, MDEx plugin]
+description: |
+  Extends MDEx to support custom heading IDs using `{#id}` syntax.
 project_links:
   - Source Code: https://github.com/halostatue/mdex_custom_heading_id
   - Hex Package: https://hex.pm/packages/mdex_custom_heading_id

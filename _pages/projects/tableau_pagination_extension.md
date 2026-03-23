@@ -3,6 +3,8 @@ title: TableauPaginationExtension
 layout: HalostatueCa.ProjectLayout
 related_tag: tableau_pagination_extension
 categories: [Elixir, Tableau extension]
+description: |
+  Provides paginated collections for indexes, tags, tag pages, and more.
 project_links:
   - Source Code: https://github.com/halostatue/tableau_pagination_extension
   - Hex Package: https://hex.pm/packages/tableau_pagination_extension

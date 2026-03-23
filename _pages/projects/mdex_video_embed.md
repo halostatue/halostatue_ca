@@ -3,13 +3,18 @@ title: MDExVideoEmbed
 layout: HalostatueCa.ProjectLayout
 related_tag: mdex_video_embed
 categories: [Elixir, MDEx plugin]
+description: |
+  Makes it easy to embed videos from YouTube in Markdown with as much
+  privacy-preservation as possible.
 project_links:
   - Source Code: https://github.com/halostatue/mdex_video_embed
   - Hex Package: https://hex.pm/packages/mdex_video_embed
   - Documentation: https://hexdocs.pm/mdex_video_embed
 ---
 
-Privacy-respecting video embeds for [MDEx][mdex] using Markdown code blocks. Only supports video services with enhanced privacy options—currently YouTube via `youtube-nocookie.com` with click-to-load consent.
+Privacy-respecting video embeds for [MDEx][mdex] using Markdown code blocks.
+Only supports video services with enhanced privacy options—currently YouTube via
+`youtube-nocookie.com` with click-to-load consent.
 
 <div class="code-transform">
 

@@ -43,6 +43,12 @@ defmodule HalostatueCa.ProjectsPage do
                   a href: project.permalink, class: "project-link" do
                     project.title
                   end
+
+                  if project[:description] do
+                    div class: "project-description" do
+                      render_excerpt(project.description)
+                    end
+                  end
                 end
               end
             end

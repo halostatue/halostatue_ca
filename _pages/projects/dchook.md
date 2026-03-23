@@ -3,6 +3,8 @@ title: dchook
 layout: HalostatueCa.ProjectLayout
 related_tag: dchook
 categories: [Go, DevOps, Docker Compose]
+description: |
+  A webhook listener for updating a Docker Compose configuration when updated.
 project_links:
   - Source Code: https://github.com/halostatue/dchook
   - Releases: https://github.com/halostatue/dchook/releases

@@ -3,6 +3,8 @@ title: TableauRefLinkExtension
 layout: HalostatueCa.ProjectLayout
 related_tag: tableau_ref_link_extension
 categories: [Elixir, Tableau extension]
+description: |
+  Makes it easy to have cross-content links.
 project_links:
   - Source Code: https://github.com/halostatue/tableau_ref_link_extension
   - Hex Package: https://hex.pm/packages/tableau_ref_link_extension

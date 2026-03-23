@@ -3,6 +3,8 @@ title: Pagefindex
 layout: HalostatueCa.ProjectLayout
 related_tag: pagefindex
 categories: [Elixir, Tableau extension, Search]
+description: |
+  Integrated [Pagefind](https://pagefind.app) with Tableau for site search.
 project_links:
   - Source Code: https://github.com/halostatue/pagefindex
   - Hex Package: https://hex.pm/packages/pagefindex
