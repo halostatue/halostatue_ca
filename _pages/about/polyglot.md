@@ -59,14 +59,15 @@ five years.
 
 #### Familiar
 
-14. [HCL][hcl] †
-15. [Lua][lua]
-16. [PL/pgSQL][plpgsql]
-17. [Python][python]
-18. [Rust][rust]
-19. [Tcl][tcl]
-20. [Solidity][solidity]
-21. [XSL][xsl] †
+15. [Gleam][gleam]
+16. [HCL][hcl] †
+17. [Lua][lua]
+18. [PL/pgSQL][plpgsql]
+19. [Python][python]
+20. [Rust][rust]
+21. [Tcl][tcl]
+22. [Solidity][solidity]
+23. [XSL][xsl] †
 
 </div></div>
 
@@ -80,22 +81,22 @@ off at the same proficiency level.
 
 #### Expert
 
-22. [zsh][zsh]
+24. [zsh][zsh]
 
 </div><div>
 
 #### Proficient
 
-23. [Java][java]
-24. [LaTeX][latex]
-25. [M4][m4]
+25. [Java][java]
+26. [LaTeX][latex]
+27. [M4][m4]
 
 </div><div>
 
 #### Familiar
 
-27. [Puppet][puppet] †
-28. [Swift][swift]
+28. [Puppet][puppet] †
+29. [Swift][swift]
 
 </div></div>
 
@@ -110,10 +111,10 @@ to do so.
 
 #### Expert
 
-29. [C#][csharp]
-30. [C++][cpp]
-31. [Pascal][pascal]
-32. [PL/SQL][oracle-plsql]
+30. [C#][csharp]
+31. [C++][cpp]
+32. [Pascal][pascal]
+33. [PL/SQL][oracle-plsql]
 
 </div><div>
 
@@ -136,16 +137,16 @@ to do so.
 
 #### Familiar
 
-45. [Io][iolang]
-46. [WordPerfect macros][wordperfect] †
+46. [Io][iolang]
+47. [WordPerfect macros][wordperfect] †
 
 </div></div>
 
 ## Conversant Languages
 
-I consider myself conversant with [Erlang][erlang], [Gleam][gleam], [Elm][elm],
-and [Zig][zig] -- but have not shipped anything using them, and reading familiar
-with [Ada][ada], [COBOL][cobol], and [Smalltalk][smalltalk].
+I consider myself conversant with [Erlang][erlang], [Elm][elm], and [Zig][zig]
+-- but have not shipped anything using them, and reading familiar with
+[Ada][ada], [COBOL][cobol], and [Smalltalk][smalltalk].
 
 [diff-lcs]: https://github.com/halostatue/diff-lcs
 [ada]: https://en.wikipedia.org/wiki/Ada_(programming_language)

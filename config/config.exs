@@ -59,6 +59,13 @@ config :tableau, Tableau.TagExtension,
 config :tableau, TableauEexExtension, enabled: true, dir: "_eex"
 config :tableau, TableauExcerptExtension, enabled: true
 
+config :tableau, TableauPageFeedbackExtension,
+  enabled: true,
+  forge: :github,
+  repo: "halostatue/halostatue_ca",
+  title_prefix: "Re: ",
+  github: [discussion: [category: "General"]]
+
 config :tableau, TableauPaginationExtension,
   enabled: true,
   collections: [

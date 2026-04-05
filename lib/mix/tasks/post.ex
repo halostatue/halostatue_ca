@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.HalostatueCa.Gen.Post do
+defmodule Mix.Tasks.Gen.Post do
   @shortdoc "Generate a new post"
   @moduledoc @shortdoc
 
@@ -12,7 +12,6 @@ defmodule Mix.Tasks.HalostatueCa.Gen.Post do
 
     post_title = Enum.join(argv, " ")
     post_date = Date.utc_today()
-    post_time = "01:00:00 -04:00"
 
     file_name =
       post_title
@@ -30,10 +29,9 @@ defmodule Mix.Tasks.HalostatueCa.Gen.Post do
 
     front_matter = """
     ---
-    layout: HalostatueCa.PostLayout
     title: \"#{post_title}\"
-    date: #{post_date} #{post_time}
-    permalink: /:title/
+    date: #{post_date}
+    tags: []
     ---
     """
 
