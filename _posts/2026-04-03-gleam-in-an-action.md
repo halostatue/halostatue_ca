@@ -4,6 +4,11 @@ date: 2026-04-05
 tags:
   - Gleam
   - GitHub Actions
+revisions:
+  - date: 2026-04-06
+    rev: |
+      Modified the Gleam commentary to remove discussion of the deprecated
+      `@target` attribute while keeping the essential complaint alive.
 ---
 
 I recently released a GitHub Action written in [Gleam][gleam] so that I could
@@ -57,43 +62,36 @@ the code in `starlist`, I think that there's a good chance I will port other
 actions to Gleam and I can see extending pontil to cover not just
 `actions/toolkit`, but other functionality I use in GitHub Actions.
 
-Gleam's story is still evolving, and there are gaps. In particular, the
-`@target` attribute has been (soft) deprecated without a clear replacement
-strategy. This lack presents difficulty in providing a common `main` for both
-BEAM and JavaScript targets with `gleam_http` as the BEAM adapters (like
-`gleam_httpc`) define `send(req: Request(a)) -> Result(Response(b, e))` and
-`gleam_fetch` defines
-`send(req: Request(a)) -> Promise(Result(Response(b), e))`. When building the
-example for `squall` using GitHub, I needed to specify different targets for the
-send and print functions (simplified here to `send_and_print(req)`):
+Gleam's story is still evolving, and there are gaps. In particular, there's no
+supported way in Gleam 1.15 to have a single `main()` which can make HTTP
+requests with `gleam_httpc` (BEAM) or `gleam_fetch` (JavaScript) because of
+differing concurrency models and return types.
 
 ```gleam
-@target(erlang)
-fn send_and_print(request: request.Request(String)) -> Nil {
-  use body <- result.try(
-    httpc.send(request)
-    |> result.map(fn(resp) { resp.body })
-    |> result.map_error(fn(_) { "HTTP request failed" })
-  )
+// gleam_httpc
+pub fn send(request: Request(a)) -> Result(b, e)
 
-  io.println(body)
-}
+// gleam_fetch
+pub fn send(request: Request(a)) -> Promise(Result(b, e))
+```
 
-@target(javascript)
-fn send(request: request.Request(String)) -> Nil {
-  use body <- promise.try_await(
-    fetch.send(request)
-    |> promise.try_await(fetch.read_text_body)
-    |> promise.map(fn(result) {
-      result
-      |> result.map(fn(resp) { resp.body })
-      |> result.map_error(fn(_) { "HTTP request failed" })
-    })
-  )
+In most cases, this is fine. The JavaScript `async` concurrency model permeates
+and undermines the procedural nature of GitHub Actions. If one could write
+JavaScript that does something like:
 
-  io.println(body)
+```javascript
+const fetchSync = sync (request) => {
+  await fetch(request)
 }
 ```
+
+And the runtime halts execution of that thread just as if there were a native
+`fetchSync` instead of just `fetch`, it would be ideal for a certain class of
+application. But this doesn't exist, and it means that as of right now, I would
+likely need to have duplication of control flows in separate modules or packages
+with distinct `main()` functions for BEAM and JavaScript targets. This may be
+unavoidable, but it is a disappointing wart for writing _tools_[^byoc] that
+should be able to work similarly.
 
 If I'm misunderstanding something, [drop a line][feedback].
 
@@ -150,6 +148,13 @@ If I'm misunderstanding something, [drop a line][feedback].
     common (`envoy`, `filepath`, `gleam_fetch`, `gleam_javascript`,
     `gleam_json`, `gleam_stdlib`, `glemplate`, `pontil`, `shellout`,
     `simplifile`, `squall`, `tom`, `youid`), and CLI support (`argv`, `clip`).
+
+[^byoc]: The rule of thumb in Gleam is "bring your own client". If you're
+    building something to assist with requests, build (or use) three packages:
+    the core request and response processing logic, the BEAM request client, and
+    the JavaScript request client. `gleam_http` builds requests and processes
+    responses that are usable by `gleam_httpc` and `gleam_fetch`, but does not
+    interact with the HTTP clients on either platform.
 
 [da]: https://github.com/halostatue/dependabot-automerge
 [esgleam]: https://hexdoc.pm/esgleam
