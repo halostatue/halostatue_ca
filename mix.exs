@@ -52,7 +52,7 @@ defmodule HalostatueCa.MixProject do
       {:prosody, "~> 1.0"},
       # {:prosody, "~> 1.0", path: Path.expand("~/oss/halostatue/prosody")},
       {:req, "~> 0.5"},
-      {:solid, "~> 1.1"},
+      # {:solid, "~> 1.1"},
       {:tableau, "~> 0.30"},
       # {:tableau, "~> 0.30", path: Path.expand("~/oss/forks/tableau"), override: true},
       {:tableau_eex_extension, "~> 1.0"},
@@ -72,8 +72,9 @@ defmodule HalostatueCa.MixProject do
       {:temple, "~> 0.12"},
       {:tz, "~> 0.28"},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
-      {:stream_data, "~> 1.1", only: [:dev, :test]},
+      {:mix_audit, "~> 2.1", only: [:dev, :test]},
       {:quokka, "~> 2.0", only: [:dev, :test]},
+      {:stream_data, "~> 1.1", only: [:dev, :test]},
       {:usage_rules, "~> 1.1", only: [:dev], runtime: false}
     ]
   end
