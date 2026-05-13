@@ -27,6 +27,8 @@ each published independently to [Hex][hex]:
 | [`pontil_core`][pontil_core]         | Core workflow commands and input parsing | Erlang, JavaScript |
 | [`pontil_platform`][pontil_platform] | Runtime, OS, and architecture detection  | Erlang, JavaScript |
 | [`pontil_summary`][pontil_summary]   | Job summary builder                      | Erlang, JavaScript |
+| [`pontil_context`][pontil_context]   | GitHub Event Context                     | Erlang, JavaScript |
+| [`pontil_build`][pontil_build]       | Action builder with `esbuild`            | Erlang             |
 
 Most users should depend on `pontil` directly. The sub-packages exist for use
 cases that don't need the full toolkit or need Erlang target support.
@@ -113,15 +115,32 @@ Job summary builder ported from [actions/core summary][actions-summary]. Builds
 rich Markdown summaries with headings, tables, lists, links, images, and quotes.
 Works on all Gleam targets and runtimes.
 
+### `pontil_context`
+
+Pontil context provides the GitHub Actions execution context and webhook event
+types for Gleam, supporting both Erlang and JavaScript targets. It is the Gleam
+equivalent of the `context` object from [@actions/github][actions-github], part
+of the GitHub Actions [toolkit][toolkit].
+
+### `pontil_build`
+
+An [`esbuild`][esbuild] bundler for GitHub Actions written in Gleam. Bundles
+your Gleam action into a single CommonJS file suitable for use with GitHub
+Actions.
+
 [^1]: "pontil." Apple Dictionary / _Oxford English Dictionary_, Version 2.3.0
     (294), Apple Inc., 2025.
 
 [actions-core]: https://github.com/actions/toolkit/tree/main/packages/core
+[actions-github]: https://github.com/actions/toolkit/tree/main/packages/github
 [actions-summary]: https://github.com/actions/toolkit/blob/main/packages/core/src/summary.ts
 [ditherwither-platform]: https://github.com/DitherWither/platform
+[esbuild]: https://esbuild.github.io
 [gleam]: https://gleam.run
 [hex]: https://hex.pm
 [pontil]: https://hex.pm/packages/pontil
+[pontil_build]: https://hex.pm/packages/pontil_build
+[pontil_context]: https://hex.pm/packages/pontil_context
 [pontil_core]: https://hex.pm/packages/pontil_core
 [pontil_platform]: https://hex.pm/packages/pontil_platform
 [pontil_summary]: https://hex.pm/packages/pontil_summary
