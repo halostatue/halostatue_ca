@@ -132,3 +132,4 @@ I can also be found elsewhere.
 [mime-types/ruby-mime-types]: https://github.com/mime-types/ruby-mime-types
 [polyglot]: $ref:polyglot.md
 [rir]: http://randsinrepose.com
+[whitman]: http://rpo.library.utoronto.ca/poems/song-myself#poemline-1325
