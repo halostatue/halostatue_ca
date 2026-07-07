@@ -6,8 +6,9 @@ categories: [Go, DevOps, Docker Compose]
 description: |
   A webhook listener for updating a Docker Compose configuration when updated.
 project_links:
-  - Source Code: https://github.com/halostatue/dchook
-  - Releases: https://github.com/halostatue/dchook/releases
+  - GitHub: https://github.com/halostatue/dchook
+  - releases: https://github.com/halostatue/dchook/releases
+  - Apache 2.0: https://github.com/halostatue/dchook/main/blob/LICENCE.md
 ---
 
 `dchook` is a secure webhook receiver for updating Docker Compose deployments

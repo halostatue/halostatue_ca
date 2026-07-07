@@ -7,9 +7,8 @@ description: |
   IO capture for Gleam tests — intercepts stdout, stderr, or both and returns
   captured output as a string.
 project_links:
-  - Source Code: https://github.com/halostatue/take
-  - "take docs": https://hexdocs.pm/take
-  - "take_promise docs": https://hexdocs.pm/take_promise
+  - GitHub: https://github.com/halostatue/take
+  - Apache 2.0: https://github.com/halostatue/take/main/blob/LICENCE.md
 ---
 
 Take provides IO capture for Gleam tests, replicating parts of Elixir's
@@ -18,10 +17,10 @@ the captured output as a string.
 
 The repository contains two packages:
 
-| Package                        | Description                              | Targets            |
-| ------------------------------ | ---------------------------------------- | ------------------ |
-| [`take`][take]                 | Synchronous IO capture                   | Erlang, JavaScript |
-| [`take_promise`][take_promise] | Async IO capture for `Promise` callbacks | JavaScript         |
+| Package                                                    | Description                              | Targets            |
+| ---------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| [`take`][take] ([docs][take-docs])                         | Synchronous IO capture                   | Erlang, JavaScript |
+| [`take_promise`][take_promise] ([docs][take-promise-docs]) | Async IO capture for `Promise` callbacks | JavaScript         |
 
 ## Installation
 
@@ -78,5 +77,7 @@ pub fn async_greeting_test() {
 }
 ```
 
-[take]: https://hexdocs.pm/take
-[take_promise]: https://hexdocs.pm/take_promise
+[take]: https://hex.pm/packages/take
+[take_promise]: https://hex.pm/packages/take_promise
+[take-docs]: https://take.hexdocs.pm
+[take-promise-docs]: https://take-promise.hexdocs.pm

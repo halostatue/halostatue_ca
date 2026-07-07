@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension, Search]
 description: |
   Integrated [Pagefind](https://pagefind.app) with Tableau for site search.
 project_links:
-  - Source Code: https://github.com/halostatue/pagefindex
-  - Hex Package: https://hex.pm/packages/pagefindex
-  - Documentation: https://hexdocs.pm/pagefindex
+  - GitHub: https://github.com/halostatue/pagefindex
+  - hex.pm: https://hex.pm/packages/pagefindex
+  - hexdocs: https://pagefindex.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/pagefindex/main/blob/LICENCE.md
 ---
 
 Runs [Pagefind][pagefind] search indexing for static sites. Works as a
@@ -33,5 +34,5 @@ mix pagefind --run-with=bun
 mix pagefind --use-version=1.4.0
 ```
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm
 [pagefind]: https://pagefind.app

@@ -25,6 +25,8 @@ config :elixir, :time_zone_database, Tz.TimeZoneDatabase
 
 config :floki, :html_parser, Html5ever
 
+config :mdex_native, syntax_highlighter: :lumis
+
 config :tableau, Pagefindex.Tableau,
   enabled: true,
   run_with: :local,
@@ -153,17 +155,20 @@ config :tableau, :config,
   markdown: [
     mdex: [
       extension: [
-        header_ids: "",
+        header_id_prefix: "",
         highlight: true,
         math_code: true,
         spoiler: true
       ],
       parse: [smart: true],
       syntax_highlight: [
-        formatter: {
-          :html_multi_themes,
-          themes: [light: "onelight", dark: "kanagawa_dragon"], default_theme: "light-dark()"
-        }
+        engine: :lumis,
+        opts: [
+          formatter: {
+            :html_multi_themes,
+            themes: [light: "onelight", dark: "kanagawa_dragon"], default_theme: "light-dark()"
+          }
+        ]
       ],
       plugins: [
         MDExCustomHeadingId,

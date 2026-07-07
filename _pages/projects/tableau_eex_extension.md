@@ -7,9 +7,10 @@ description: |
   Adds support for pages that are EEX templates. This is used to generate
   [`humans.txt`](/humans.txt).
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_eex_extension
-  - Hex Package: https://hex.pm/packages/tableau_eex_extension
-  - Documentation: https://hexdocs.pm/tableau_eex_extension
+  - GitHub: https://github.com/halostatue/tableau_eex_extension
+  - hex.pm: https://hex.pm/packages/tableau_eex_extension
+  - hexdocs: https://tableau-eex-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_eex_extension/main/blob/LICENCE.md
 ---
 
 This is a [Tableau][tableau] extension that renders EEx templates to static
@@ -50,4 +51,4 @@ Last update: 2026-03-06
 The extension renders templates to the output directory, stripping the `.eex`
 extension.
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm

@@ -4,7 +4,7 @@
   /* Light theme colors */
   --light-color-text: #3a3328;
   --light-color-text-muted: #5a4d3e;
-  --light-color-background: #f0ede6;
+  --light-color-background: #e0ddd5;
   --light-color-surface: #e8e3d8;
   --light-color-border: #d4c9b8;
   --light-color-accent: #5d3d8a;
@@ -18,6 +18,9 @@
   --dark-color-border: #3d3a41;
   --dark-color-accent: #9580c8;
   --dark-color-accent-hover: #b39ddb;
+
+  /* Neutral dark surface (theme-independent) */
+  --color-surface-dark: #454545;
 
   /* Default to light theme */
   --color-text: var(--light-color-text);

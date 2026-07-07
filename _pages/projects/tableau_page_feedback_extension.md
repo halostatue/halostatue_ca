@@ -6,10 +6,10 @@ categories: [Elixir, Tableau extension]
 description: |
   Generates feedback links (issues, discussions) for Tableau pages and posts.
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_page_feedback_extension
-  - Hex Package: https://hex.pm/packages/tableau_page_feedback_extension
-  - Documentation: https://hexdocs.pm/tableau_page_feedback_extension
-llm-editable: true
+  - GitHub: https://github.com/halostatue/tableau_page_feedback_extension
+  - hex.pm: https://hex.pm/packages/tableau_page_feedback_extension
+  - hexdocs: https://tableau-page-feedback-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_page_feedback_extension/main/blob/LICENCE.md
 ---
 
 A [Tableau][tableau] extension that generates feedback links for every page and
@@ -56,10 +56,9 @@ silently disabled with a warning.
 ### In Markdown Content
 
 ```markdown
-[Report an issue]($feedback:issue)
-[Start a discussion]($feedback:discussion)
+[Report an issue]($feedback:issue) [Start a discussion]($feedback:discussion)
 ```
 
 Markers for disabled feedback types are left in place.
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm

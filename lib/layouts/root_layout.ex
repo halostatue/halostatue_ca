@@ -226,13 +226,13 @@ defmodule HalostatueCa.RootLayout do
             p do
               "© #{Date.utc_today().year} Austin Ziegler. Built with "
 
-              a href: "https://hexdocs.pm/tableau" do
+              a href: "https://tableau.hexdocs.pm" do
                 "Tableau"
               end
 
               " and "
 
-              a href: "https://hexdocs.pm/temple" do
+              a href: "https://temple.hexdocs.pm" do
                 "Temple"
               end
 

@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension]
 description: |
   Provides paginated collections for indexes, tags, tag pages, and more.
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_pagination_extension
-  - Hex Package: https://hex.pm/packages/tableau_pagination_extension
-  - Documentation: https://hexdocs.pm/tableau_pagination_extension
+  - GitHub: https://github.com/halostatue/tableau_pagination_extension
+  - hex.pm: https://hex.pm/packages/tableau_pagination_extension
+  - hexdocs: https://tableau-pagination-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_pagination_extension/main/blob/LICENCE.md
 ---
 
 This is a [Tableau][tableau] extension for creating paginated index pages for
@@ -104,4 +105,4 @@ Templates receive these assigns:
 - `@prev_page_url` / `@next_page_url`: Navigation URLs
 - `@first_page_url` / `@last_page_url`: Jump to endpoints
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm

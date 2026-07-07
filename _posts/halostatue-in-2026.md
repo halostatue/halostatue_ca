@@ -10,7 +10,7 @@ revisions:
     rev: |
       Fixed some errors that I should have caught before publishing.
 tags:
-  - Blogging
+  - blogging
   - Elixir
 ---
 
@@ -160,7 +160,7 @@ been around too long.
 [redirects]: $ref:tableau_redirects_extension.md
 [ref_link]: $ref:tableau_ref_link_extension.md
 [social]: $ref:tableau_social_extension.md
-[tableau]: https://hexdocs.pm/tableau
-[temple]: https://hexdocs.pm/temple
+[tableau]: https://tableau.hexdocs.pm
+[temple]: https://temple.hexdocs.pm
 [video_embed]: $ref:mdex_video_embed.md
 [worst]: https://colton.dev/blog/tailwind-is-the-worst-of-all-worlds/

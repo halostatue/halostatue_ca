@@ -8,9 +8,10 @@ description: |
   In Erlang, this uses `persistent_term`; in JavaScript, values are stored in
   a module level `Map`.
 project_links:
-  - Source Code: https://github.com/halostatue/capuchin_crypt
-  - Hex Package: https://hex.pm/packages/capuchin_crypt
-  - Documentation: https://hexdocs.pm/capuchin_crypt
+  - GitHub: https://github.com/halostatue/capuchin_crypt
+  - hex.pm: https://hex.pm/packages/capuchin_crypt
+  - hexdocs: https://capuchin-crypt.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/capuchin_crypt/main/blob/LICENCE.md
 ---
 
 An in-memory persistent cache for [Gleam][gleam], expensive to update and cheap

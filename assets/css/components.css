@@ -94,21 +94,45 @@
 
 .project-link-capsule {
   display: inline-block;
-  padding: var(--spacing-xs) var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: calc(var(--border-radius) * 2);
   font-size: 0.75rem;
+  font-variant-caps: small-caps;
   text-decoration: none;
-  color: var(--color-accent);
+  color: var(--color-text);
+  --capsule-shadow-color: rgb(0 0 0 / 0.15);
+  --capsule-shadow-color-hover: rgb(0 0 0 / 0.2);
+  box-shadow:
+    0 2px 4px 0 var(--capsule-shadow-color),
+    0 1px 2px -1px var(--capsule-shadow-color);
   transition:
     background-color 0.2s,
-    border-color 0.2s;
+    border-color 0.2s,
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .project-link-capsule:hover {
   background-color: var(--color-border);
   border-color: var(--color-text-muted);
+  box-shadow:
+    0 4px 8px -1px var(--capsule-shadow-color-hover),
+    0 2px 4px -2px var(--capsule-shadow-color-hover);
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] .project-link-capsule {
+  --capsule-shadow-color: rgb(0 0 0 / 0.4);
+  --capsule-shadow-color-hover: rgb(0 0 0 / 0.55);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) .project-link-capsule {
+    --capsule-shadow-color: rgb(0 0 0 / 0.4);
+    --capsule-shadow-color-hover: rgb(0 0 0 / 0.55);
+  }
 }
 
 .project-link-capsule .external-link-icon {

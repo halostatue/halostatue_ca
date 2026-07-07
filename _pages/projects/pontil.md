@@ -6,11 +6,8 @@ categories: [Gleam, GitHub Actions]
 description: |
   A Gleam port of GitHub's actions/toolkit for writing GitHub Actions in Gleam.
 project_links:
-  - Source Code: https://github.com/halostatue/pontil
-  - "pontil docs": https://hexdocs.pm/pontil
-  - "pontil_core docs": https://hexdocs.pm/pontil_core
-  - "pontil_platform docs": https://hexdocs.pm/pontil_platform
-  - "pontil_summary docs": https://hexdocs.pm/pontil_summary
+  - GitHub: https://github.com/halostatue/pontil
+  - Apache 2.0: https://github.com/halostatue/pontil/main/blob/LICENCE.md
 ---
 
 > **pontil**[^1] | ˈpɒntɪl | (punty | ˈpʌnti |) noun
@@ -21,14 +18,14 @@ Pontil is a [Gleam][gleam] port of GitHub [actions/toolkit][toolkit] to ease
 writing GitHub Actions in Gleam. It is a monorepo currently with four packages,
 each published independently to [Hex][hex]:
 
-| Package                              | Description                              | Targets            |
-| ------------------------------------ | ---------------------------------------- | ------------------ |
-| [`pontil`][pontil]                   | High-level API for GitHub Actions        | JavaScript         |
-| [`pontil_core`][pontil_core]         | Core workflow commands and input parsing | Erlang, JavaScript |
-| [`pontil_platform`][pontil_platform] | Runtime, OS, and architecture detection  | Erlang, JavaScript |
-| [`pontil_summary`][pontil_summary]   | Job summary builder                      | Erlang, JavaScript |
-| [`pontil_context`][pontil_context]   | GitHub Event Context                     | Erlang, JavaScript |
-| [`pontil_build`][pontil_build]       | Action builder with `esbuild`            | Erlang             |
+| Package                                                             | Description                              | Targets            |
+| ------------------------------------------------------------------- | ---------------------------------------- | ------------------ |
+| [`pontil`][pontil] ([docs][pontil-docs])                            | High-level API for GitHub Actions        | JavaScript         |
+| [`pontil_core`][pontil_core] ([docs][pontil-core-docs])             | Core workflow commands and input parsing | Erlang, JavaScript |
+| [`pontil_platform`][pontil_platform] ([docs][pontil-platform-docs]) | Runtime, OS, and architecture detection  | Erlang, JavaScript |
+| [`pontil_summary`][pontil_summary] ([docs][pontil-summary-docs])    | Job summary builder                      | Erlang, JavaScript |
+| [`pontil_context`][pontil_context] ([docs][pontil-context-docs])    | GitHub Event Context                     | Erlang, JavaScript |
+| [`pontil_build`][pontil_build] ([docs][pontil-build-docs])          | Action builder with `esbuild`            | Erlang             |
 
 Most users should depend on `pontil` directly. The sub-packages exist for use
 cases that don't need the full toolkit or need Erlang target support.
@@ -138,6 +135,12 @@ Actions.
 [esbuild]: https://esbuild.github.io
 [gleam]: https://gleam.run
 [hex]: https://hex.pm
+[pontil-build-docs]: https://pontil-build.hexdocs.pm
+[pontil-core-docs]: https://pontil-core.hexdocs.pm
+[pontil-context-docs]: https://pontil-context.hexdocs.pm
+[pontil-docs]: https://pontil.hexdocs.pm
+[pontil-platform-docs]: https://pontil-platform.hexdocs.pm
+[pontil-summary-docs]: https://pontil-summary.hexdocs.pm
 [pontil]: https://hex.pm/packages/pontil
 [pontil_build]: https://hex.pm/packages/pontil_build
 [pontil_context]: https://hex.pm/packages/pontil_context

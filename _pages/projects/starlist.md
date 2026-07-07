@@ -7,9 +7,14 @@ description: |
   A GitHub Action tool that generates categorized Markdown lists of starred
   repositories.
 project_links:
-  - Source Code: https://github.com/halostatue/starlist
+  #- GitHub: https://github.com/halostatue/starlist
   - Example Output: https://github.com/halostatue/stars
+  # - Apache 2.0: https://github.com/halostatue/starlist/main/blob/LICENCE.md
 ---
+
+> 2026-07-06: `halostatue/starlist` is currently blocked by GitHub with no
+> explanation other than "ToS violation". I have a ticket open requesting
+> review, but I've heard nothing since the suspension.
 
 `halostatue/starlist` generates categorized Markdown lists of GitHub starred
 repositories. It runs as a **GitHub Action** on a schedule or manually. An
@@ -54,5 +59,5 @@ repository. Configuration is via TOML, either inline or from a file.
   automatically be enabled by year.
 - **Templates**: customizable output via [`glemplate`][glemplate] templates.
 
-[glemplate]: https://hexdocs.pm/glemplate
+[glemplate]: https://glemplate.hexdocs.pm
 [stars]: https://github.com/halostatue/stars

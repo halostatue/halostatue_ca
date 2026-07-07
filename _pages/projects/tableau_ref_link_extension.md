@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension]
 description: |
   Makes it easy to have cross-content links.
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_ref_link_extension
-  - Hex Package: https://hex.pm/packages/tableau_ref_link_extension
-  - Documentation: https://hexdocs.pm/tableau_ref_link_extension
+  - GitHub: https://github.com/halostatue/tableau_ref_link_extension
+  - hex.pm: https://hex.pm/packages/tableau_ref_link_extension
+  - hexdocs: https://tableau-ref-link-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_ref_link_extension/main/blob/LICENCE.md
 ---
 
 This is a [Tableau][tableau] extension that resolves reference links to pages,
@@ -78,4 +79,4 @@ Links with `$site:<path>` resolve to files relative to the site base URL.
 
 No content lookup or validation is performed.
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm

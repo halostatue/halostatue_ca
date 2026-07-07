@@ -7,9 +7,10 @@ description: |
   Makes it easy to embed videos from YouTube in Markdown with as much
   privacy-preservation as possible.
 project_links:
-  - Source Code: https://github.com/halostatue/mdex_video_embed
-  - Hex Package: https://hex.pm/packages/mdex_video_embed
-  - Documentation: https://hexdocs.pm/mdex_video_embed
+  - GitHub: https://github.com/halostatue/mdex_video_embed
+  - hex.pm: https://hex.pm/packages/mdex_video_embed
+  - hexdocs: https://mdex-video-embed.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/mdex_video_embed/main/blob/LICENCE.md
 ---
 
 Privacy-respecting video embeds for [MDEx][mdex] using Markdown code blocks.
@@ -75,4 +76,4 @@ title=Weapon of Choice by Fatboy Slim
 mode=embedlite
 ```
 
-[mdex]: https://hexdocs.pm/mdex
+[mdex]: https://mdex.hexdocs.pm

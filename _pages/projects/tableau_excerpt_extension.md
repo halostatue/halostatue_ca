@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension]
 description: |
   Excerpts content from posts.
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_excerpt_extension
-  - Hex Package: https://hex.pm/packages/tableau_excerpt_extension
-  - Documentation: https://hexdocs.pm/tableau_excerpt_extension
+  - GitHub: https://github.com/halostatue/tableau_excerpt_extension
+  - hex.pm: https://hex.pm/packages/tableau_excerpt_extension
+  - hexdocs: https://tableau-excerpt-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_excerpt_extension/main/blob/LICENCE.md
 ---
 
 This is a [Tableau][tableau] extension that can automatically extract excerpts
@@ -111,4 +112,4 @@ defmodule MySite.PostsPage do
 end
 ```
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm

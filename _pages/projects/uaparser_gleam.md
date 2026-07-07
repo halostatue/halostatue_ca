@@ -8,9 +8,10 @@ description: |
   BrowserScope collection of core regular expressions. This is _primarily_
   generated code from the regular expressions, including unit tests.
 project_links:
-  - Source Code: https://github.com/halostatue/uaparser_gleam
-  - Hex Package: https://hex.pm/packages/uaparser_gleam
-  - Documentation: https://hexdocs.pm/uaparser_gleam
+  - GitHub: https://github.com/halostatue/uaparser_gleam
+  - hex.pm: https://hex.pm/packages/uaparser_gleam
+  - hexdocs: https://uaparser-gleam.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/uaparser_gleam/main/blob/LICENCE.md
 ---
 
 `uaparser` is a User Agent parser implementation generated from the

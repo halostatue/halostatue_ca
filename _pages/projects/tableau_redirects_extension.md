@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension]
 description: |
   Generates redirects for moved content (because cool URIs don't change).
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_redirects_extension
-  - Hex Package: https://hex.pm/packages/tableau_redirects_extension
-  - Documentation: https://hexdocs.pm/tableau_redirects_extension
+  - GitHub: https://github.com/halostatue/tableau_redirects_extension
+  - hex.pm: https://hex.pm/packages/tableau_redirects_extension
+  - hexdocs: https://tableau-redirects-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_redirects_extension/main/blob/LICENCE.md
 ---
 
 This is a [Tableau][tableau] extension for generating redirects because
@@ -136,5 +137,5 @@ redirects:
 An `alias` redirect goes to the content's permalink, whereas a `fragment`
 redirect goes to the content's permalink at a specific URI fragment.
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm
 [uri]: https://www.w3.org/Provider/Style/URI

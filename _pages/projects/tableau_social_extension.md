@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension]
 description: |
   Makes it easy to have your social media profile links visible.
 project_links:
-  - Source Code: https://github.com/halostatue/tableau_social_extension
-  - Hex Package: https://hex.pm/packages/tableau_social_extension
-  - Documentation: https://hexdocs.pm/tableau_social_extension
+  - GitHub: https://github.com/halostatue/tableau_social_extension
+  - hex.pm: https://hex.pm/packages/tableau_social_extension
+  - hexdocs: https://tableau-social-extension.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/tableau_social_extension/main/blob/LICENCE.md
 ---
 
 This is a [Tableau][tableau] extension that replaces HTML tags with social media
@@ -133,4 +134,4 @@ social_accounts:
 ---
 ```
 
-[tableau]: https://hexdocs.pm/tableau
+[tableau]: https://tableau.hexdocs.pm

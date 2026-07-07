@@ -6,9 +6,10 @@ categories: [Elixir, Tableau extension, Text analysis]
 description: |
   Calculates reading time and other content metrics.
 project_links:
-  - Source Code: https://github.com/halostatue/prosody
-  - Hex Package: https://hex.pm/packages/prosody
-  - Documentation: https://hexdocs.pm/prosody
+  - GitHub: https://github.com/halostatue/prosody
+  - hex.pm: https://hex.pm/packages/prosody
+  - hexdocs: https://prosody.hexdocs.pm
+  - Apache 2.0: https://github.com/halostatue/prosody/main/blob/LICENCE.md
 ---
 
 > **prosody**[^1] | ˈprɒsədi, ˈprəʊzədi | noun _[mass noun]_
@@ -86,5 +87,5 @@ rendering.
 [^1]: "prosody." Apple Dictionary / _Oxford English Dictionary_, Version 2.3.0
     (294), Apple Inc., 2025.
 
-[mdex]: https://hexdocs.pm/mdex
-[tableau]: https://hexdocs.pm/tableau
+[mdex]: https://mdex.hexdocs.pm
+[tableau]: https://tableau.hexdocs.pm
