@@ -5,6 +5,9 @@ description: |
 redirects:
   aliases:
     - /halostatue
+    - /2014/10/new-gpg-key/
+    - /posts/new-gpg-key/
+    - /pgp-gpg/
 title: About
 ---
 
@@ -117,6 +120,29 @@ metadata pages (collection index pagination, tag pages, etc.).
 Where possible, when I have _updated_ articles, I have attempted to ensure that
 this is reflected.
 
+## …security
+
+I don't use PGP/GPG. It's more complicated than it needs to be and I haven't
+sent or received a single PGP message in at least twenty years[^2]. Any PGP/GPG
+key asserting to be for me at any of my domains (`halostatue.ca`,
+`halostatue.com`, `zieglers.ca`) is either invalid (whether revoked or not) or
+an impostor.
+
+For the open source projects that I maintain on GitHub, most of them use the
+built-in security reporting feature. For the Ruby packages `minitar`,
+`mime-types`, and `diff-lcs`, these are also supported through Tidelift.
+
+If those are not options, you may send an email with an appropriate subject and
+the details encrypted with the [age][age] post-quantum recipient key below[^3].
+
+<div class="truncate-code">
+
+```
+age1pq139a5eyj3p3aj3sqy677hnp92cwwyj7n5t7jsgl03674599f7hu3mpg5xfac858xr0jlk7nq8e04uxklypcukshg3f98yh7zu3f7fg9xcf9lpknzjjqad6g3vl363ndhg9pjc00cajsawe6duf5rzgvm9davdsfakp3794zd6crdkj0fjtwsehxrmtvxpq0z7e8qxh8ezycyhr0s7wpt66du2557vammr8e8239cljscqujmqn7mge4je2g2deda2xke6nxukqnjqayut9uwkqd98jusj3g4hs66hxm98g7syqtwa5jfss6yw2kt4k0fqyr46vjuf6glrweqadezq9m46jcf8eshx7y0yxe62dgme9p2fxlh9jdma9fkgzeja0r44sqgsn0em0v59fge2g2ypdp4vs2kq8rng4rzxvelwk5qd5dkq4f8rwxu73tu9gv2wjpg0c4nva6p4zzkutgjnvyg94qpyk5jrx98r4vx0zwm2mgj3k8rrunn9xg65fuycjml3k24lja3gdqapk93zze672rr3xppgww3ye394t4evsualzgtfjgpgpx3kx354ntxckwfjrth58gmaq3xflxcjllmqtc8fwwae5k4lyqf34zgg3dahfwgascwzj35mz3ye8sktvy44fc05vg4xj973uen9xxcqhpwxd3lgcs9sw753sdqhfsjudjrsezt99tqztydwpzr3xlf5k9dj4e5lk9df5d8mk9kgep39aen9ea0pdnlwu5kc6g9huvftl7vh3u6esja8xppfulzgwry5pqszjx04xp78c5nru5patuecrt82y5k5rn3fljxjduvj4esyjra35ug0wkmw0ytjscwyjn9m7mjsrhxyvetl3rzxyycxkfjy933q0vkhwqt3cahm9e4h0cxxwpqn9xcw8wq6mzevjene3gu5l2knyp90jnt7mfzuefzs3t29hmq65732klp53yuavdmzn96c5v9qjv69vr806m8arwf9p5kqjn9r3mhh3ytxpv6hvvd5vet3c6ljtq3k4xgfpftlu73ddrct0dlrc9cns3nsz0q6uc3vawjc5strh96xtzq3vxfw4ry2z5de8t3m5u4zv3u7tj4wj35k4ytypqv3q8e99fu429a92p49ghdxgmd84vrtfymunfnp3uxxq2qcqft8n428pwvpayr783ktqf444n7cxpq0x8nas8qh85pyazwgvtdehf7ls9gzu6tpyz72stcez0xgh55l32lgw74n9sr0l9g68duggcmd9qlsyzldz3c0a8uezlhyw2y450vdcewq2xzexs6gtc36f623z782j43ec6fgfezxgcrue7yne8wsc7c8hn9k8k22jz42gk6nvx94esu0ts4pazq6e3cchk3tqtmfzv9qmgfslxrhqhdg05j82dlzlytczcwga5gk7gvk02usvvkjvfy5gx9447gzjscx2w4xdd50vprne6jqe7jufapr0dlh3r0g90z66j9zn4922zucdt7lndfytd3223c3mc9r5qhy8tc0fqx4h9ywmeec4lc4jp4shw74w2l7sextskf7405qd7qmkj9p5gt3sp7ku4vv5rfpkmx6xl5ayt5gc3cfy39cxks2vae9plt2ndpcs789c5t5gd32h96q3u5t5ud9mxlxqf5ewtntvjfhnzwg5pa5tpyqk6cv9cwpnvqq4e5ggke86nxukggxuh9z52y8y7y758dkvfnqsxph4vdytj5ypsx7qruy6ephrpk0gueqanntjnmmv3xclvwt83emznkzvjmpnq84k0zksdsupucvy5nmaxk54yhly9qyhjaxwwsgjmlu5pevarwd0zk9mna0f78l6trq066q4m3uswkcfkek4sz9gxczrhdat3358g5gcaa2pkh4ks69340tlgqk4rvn9qtynmjuxvmv5u73
+```
+
+</div>
+
 ## …other places
 
 I can also be found elsewhere.
@@ -126,6 +152,14 @@ I can also be found elsewhere.
 [^1]: I am an immigrant to Canada, having emigrated from the United States of
     America in 1998.
 
+[^2]: Maybe _ever_?
+
+[^3]: `age` post-quantum keys are 1,960 bytes, which is an unreasonably large
+    line to have as a code block, so I've truncated it with CSS. There is a copy
+    button on the code block if JavaScript is enabled, but triple-clicking the
+    code block should select the entire key.
+
+[age]: https://github.com/FiloSottile/age
 [halostatue/color]: https://github.com/halostatue/color
 [halostatue/diff-lcs]: https://github.com/halostatue/diff-lcs
 [halostatue/minitar]: https://github.com/halostatue/minitar

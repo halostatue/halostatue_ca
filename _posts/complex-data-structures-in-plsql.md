@@ -1,11 +1,15 @@
 ---
+title: Complex Data Structures in PL/SQL
+date: 2002-11-10
+tags: [software engineering]
+
 redirects:
   aliases:
     - /2002/11/complex-data-structures-in-plsql
     - /2002/11/an-extremely-brief-introduction-to-plsql
     - /posts/complex-data-structures-in-plsql
     - /posts/an-extremely-brief-introduction-to-plsql
-date: 2002-11-10
+
 revisions:
   - date: 2014-09-25
     rev: |
@@ -33,10 +37,6 @@ revisions:
       can be installed.
 
       [plmatrix]: https://wiki.postgresql.org/wiki/PL_Matrix
-
-tags:
-  - technology
-title: Complex Data Structures in PL/SQL
 ---
 
 In an ideal software development project, the development environment

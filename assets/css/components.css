@@ -568,3 +568,15 @@ h6 a.anchor::after {
   -webkit-mask-position: center;
   vertical-align: middle;
 }
+
+.truncate-code pre {
+  max-inline-size: 100%;
+  overflow: hidden;
+}
+
+.truncate-code .l-line {
+  max-inline-size: 98%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
